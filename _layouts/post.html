@@ -1,9 +1,15 @@
 ---
 layout: default
 ---
-<h2>{{ page.title }}</h2>
-<p class="meta">{{ page.date | date_to_string }}</p>
 
-<div id="post">
-{{ content }}
-</div>
+<article class="blogpost single">
+    <div class="bloghead">
+        <span class="title">{{ page.title }}</span>
+    </div>
+    {{ content }}
+    <span class="date">{{ page.date | date: "%B %d, %Y" }}</span>
+    <p>
+        <a href="/{{ page.category }}">↩</a>
+    </p>
+</article>
+

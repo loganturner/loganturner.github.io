@@ -1,0 +1,11 @@
+/* TEAM */
+Me: Logan Turner
+Contact: loganturner [at] me.com
+Twitter: @_loganturner
+From: Austin, Texas, USA
+
+/* SITE */
+Components: Normalize.css
+Hardware: 15" MacBook Pro
+Software: OS X 10.8, TextWrangler, GitHub for Mac, Safari
+Tools/Hosting: Jekyll, GitHub Pages
