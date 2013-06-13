@@ -367,8 +367,10 @@ img { max-width: 100% }
     }
 
     nav a, nav a:visited {
+        padding-left: 2px;
+        padding-right: 2px;
         margin: 0px;
-        margin-left: 0.5%;
-        margin-right: 0.5%;
+        margin-left: 0.3%;
+        margin-right: 0.3%;
         font-size: 11pt;
     };
