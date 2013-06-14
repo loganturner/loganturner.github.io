@@ -2,12 +2,12 @@
 layout: default
 ---
 
+<div class="splash" style="background-image:url('{{ site.images_folder }}{{ page.splash_image }}')">
+    <a href="{{ page.url }}" class="title">{{ page.title }}</a>
+</div>
 <article class="blogpost single">
-    <div class="bloghead">
-        <span class="title">{{ page.title }}</span>
-    </div>
-    {{ content }}
     <span class="date">{{ page.date | date: "%B %d, %Y" }}</span>
+    {{ content }}
     <p>
         <a href="/{{ page.category }}">↩</a>
     </p>

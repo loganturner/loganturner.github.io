@@ -1,3 +1,4 @@
 name: Logan
 pygments: true
 permalink: :categories/:year/:month/:title
+images_folder: /images/
