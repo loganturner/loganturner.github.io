@@ -8,13 +8,13 @@
 
 /*
     Colors
-        bright: #fff5eb
-        80% bright: #ccc4bc
-        20% bright: #33312f
+        bright: #fff2e6
+        80% bright: #CCC2B8
+        20% bright: #33302E
         dark: #000000
-        50% blue: #005175
-        blue: #00a3eb
-        50% bright: #7fcceb
+        50% blue: 0C4680
+        blue: #198cff
+        50% bright: 80BFFF
 */
 
 @font-face {
@@ -37,7 +37,7 @@
 /* General */
 
 html {
-    background: #fff5eb;
+    background: #fff2e6;
     font-family: 'ms500',HelveticaNeue,Helvetica,Arial,sans-serif;
     font-size: 14pt;
     -webkit-font-smoothing: antialiased;
@@ -53,12 +53,12 @@ h1 {
     font-size: 16pt;
     font-weight: normal;
     text-transform: uppercase;
-    color: #33312f;
+    color: #33302E;
     margin-top: 0em;
     margin-bottom: 0.5em;
     padding-top: 0em;
     padding-bottom: 0.5em;
-    border-bottom: 1px dotted #33312f;
+    border-bottom: 1px dotted #33302E;
 }
 
 p {
@@ -92,13 +92,13 @@ pre code {
     margin-bottom: 1em;
     padding-left: 1em;
     border-left: 1px dotted #ddd;
-    color: #33312f;
+    color: #33302E;
 }
 
 blockquote {
     padding-left: 20px;
     border-left: 1px dotted #ccc4bc;
-    color: #33312f;
+    color: #33302E;
 }
 
 #page {
@@ -106,10 +106,6 @@ blockquote {
     margin-left: auto;
     margin-right: auto;
     max-width: 1000px;
-}
-
-::selection {
-    background-color: rgba(0,163,235,0.5);
 }
 
 
@@ -123,14 +119,14 @@ article {
 
 article img {
     display: block;
-    margin: 10px auto 10px auto;
-    width: 80%;
+    margin: 5% auto 5% auto;
+    width: 100%;
     max-height: 600px;
     border-radius: 10px;
 }
 
 article a {
-    color: #00a3eb;
+    color: #198cff;
 }
 
 article a:hover {
@@ -138,12 +134,7 @@ article a:hover {
 }
 
 article a:active {
-    background-color: #6acbf8;
     color: #7fcceb;
-}
-
-article a:visited {
-    color: #005175;
 }
 
 .splash {
@@ -160,7 +151,7 @@ article a:visited {
     bottom: 0px;
     left: 0px;
     margin: 0em 0em 0.5em 5%;
-    color: #fff5eb;
+    color: #fff2e6;
     font-size: 18pt;
     text-shadow: 0px 0px 3px black;
 }
@@ -185,7 +176,7 @@ article a:visited {
 .date {
     font-family: 'ms500',HelveticaNeue,Helvetica,Arial,sans-serif;
     font-size: 14pt;
-    color: #33312f;
+    color: #33302E;
     white-space: nowrap;
 }
 
@@ -239,12 +230,12 @@ nav a {
 }
 
 nav a.selected {
-    background: #00a3eb;
-    color: #fff5eb;
+    background: #198cff;
+    color: #fff2e6;
 }
 
 nav a:hover {
-    background: #ccc4bc;
+    background: #CCC2B8;
     color: #000000;
 }
 
@@ -253,7 +244,7 @@ nav a:active {
 }
 
 #logo {
-    font-size: 36pt;
+    font-size: 37pt;
     line-height: 17pt;
     float: left;
     margin-right: 5%;
@@ -293,6 +284,7 @@ nav a:active {
     
     .splash {
         border-radius: 10px;
+        margin-bottom: 15px;
     }
     
     .splash a {
@@ -300,8 +292,14 @@ nav a:active {
     }
     
     article {
-        padding: 15px;
+        padding: 0px;
         margin: 0%;
+    }
+    
+    article img {
+        float: right;
+        margin: 25px 0px 25px 25px;
+        max-width: 60%;
     }
     
     nav {
@@ -331,7 +329,7 @@ nav a:active {
         float: none;
         font-size: 24pt;
         line-height: 12pt;
-        margin-bottom: 7%;
+        margin-bottom: 8%;
     }
 
     nav a {
