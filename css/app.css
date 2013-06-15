@@ -8,18 +8,15 @@
 
 /*
     Colors
-        bright: #fff2e6
-        80% bright: #CCC2B8
-        20% bright: #33302E
-        dark: #000000
-        50% blue: 0C4680
-        blue: #198cff
-        50% bright: #80BFFF
+        bright: #fff
+        active: #888
+        link: #666
+        dark: #444
 */
 
 @font-face {
 	font-family: 'ms500';
-	src: url('/fonts/ms500.eot'); /* IE9 Compat Modes */
+	src: url('/fonts/ms500.eot'); /* IE9 Compact Modes */
 	src: url('/fonts/ms500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
 	     url('/fonts/ms500.woff') format('woff'), /* Modern Browsers */
 	     url('/fonts/ms500.ttf')  format('truetype'), /* Safari, Android, iOS */
@@ -37,14 +34,14 @@
 /* General */
 
 html {
-    background: #fff2e6;
+    background: #fff;
     font-family: 'ms500',HelveticaNeue,Helvetica,Arial,sans-serif;
     font-size: 14pt;
     -webkit-font-smoothing: antialiased;
 }
 
 body {
-    color: #000000;
+    color: #444;
     position: relative;
 }
 
@@ -53,7 +50,7 @@ h1 {
     font-size: 16pt;
     font-weight: normal;
     text-transform: uppercase;
-    color: #33302E;
+    color: #666;
     margin-top: 0em;
     margin-bottom: 0.5em;
     padding-top: 0em;
@@ -70,7 +67,11 @@ p {
 
 a {
     text-decoration: none;
-    color: #000000;
+    color: #444;
+}
+
+a:active {
+    opacity: 0.5;
 }
 
 li {
@@ -91,14 +92,14 @@ pre code {
     display: block;
     margin-bottom: 1em;
     padding-left: 1em;
-    border-left: 1px dotted #ddd;
-    color: #33302E;
+    border-left: 1px dotted #666;
+    color: #666;
 }
 
 blockquote {
     padding-left: 20px;
-    border-left: 1px dotted #ccc4bc;
-    color: #33302E;
+    border-left: 1px dotted #666;
+    color: #666;
 }
 
 #page {
@@ -114,8 +115,6 @@ blockquote {
 article {
     padding: 5%;
     padding-top: 1em;
-    text-align: justify;
-    line-height: 150%;
 }
 
 article img {
@@ -127,15 +126,16 @@ article img {
 }
 
 article a {
-    color: #198cff;
+    color: #000;
 }
 
 article a:hover {
     text-decoration: underline;
 }
 
-article a:active {
-    color: #7fcceb;
+article p {
+    text-align: justify;
+    line-height: 150%;
 }
 
 .splash {
@@ -152,9 +152,9 @@ article a:active {
     bottom: 0px;
     left: 0px;
     margin: 0em 0em 0.5em 5%;
-    color: #fff2e6;
-    font-size: 22pt;
-    text-shadow: 0px 0px 3px black;
+    color: #fff;
+    font-size: 18pt;
+    text-shadow: -2px 0 2px #444, 0 2px 2px #444, 2px 0 2px #444, 0 -2px 2px #444;
 }
 
 .blogpost { margin-bottom: 30px }
@@ -167,31 +167,31 @@ article a:active {
     font-size: 0.75em;
     letter-spacing: 1px;
     margin-right: 7px;
-    color: #737270;
+    color: #666;
 }
 
-.bloghead .title a { color: #737270 }
+.bloghead .title a { color: #666 }
 
-.bloghead .title a:active { color: #2a2a2a }
+.bloghead .title a:active { color: #888 }
 
 .date {
     font-family: 'ms500',HelveticaNeue,Helvetica,Arial,sans-serif;
     font-size: 12pt;
     margin-bottom: 0.5em;
-    color: #CCC2B8;
+    color: #888;
     white-space: nowrap;
 }
 
 .archivedate { margin-right: 10px }
 
-.archivebloghead { border-bottom: 1px dotted #ddd }
+.archivebloghead { border-bottom: 1px dotted #888 }
 
 .archivebloghead:last-child { border-bottom: 0 }
 
 .archivebloghead .title a {
     font-size: 0.75em;
     font-family: 'ms500';
-    color: #444;
+    color: #666;
 }
 
 .archivebloghead .title a:active {
@@ -205,7 +205,7 @@ article a:active {
 .multiple {
     padding-bottom: 37px;
     margin-bottom: 50px;
-    border-bottom: 1px dotted #ddd;
+    border-bottom: 1px dotted #fff;
 }
 
 .single { margin-bottom: 17px }
@@ -223,7 +223,6 @@ header {
 }
 
 nav a {
-    margin: 0.2%;
     padding: 2px 6px 3px 6px;
     font-size: 19pt;
     text-decoration: none;
@@ -232,17 +231,13 @@ nav a {
 }
 
 nav a.selected {
-    background: #80BFFF;
-    color: #fff2e6;
+    background: #444;
+    color: #fff;
 }
 
 nav a:hover {
-    background: #CCC2B8;
-    color: #000000;
-}
-
-nav a:active {
-    opacity: 0.5;
+    background: #ddd;
+    color: #444;
 }
 
 #logo {
@@ -303,6 +298,7 @@ nav a:active {
         float: right;
         margin: 25px 0px 25px 25px;
         max-width: 60%;
+        max-height: 700px;
     }
     
     nav {
@@ -315,7 +311,7 @@ nav a:active {
         display: block;
         float: right;
         clear: both;
-        margin: 15px 0px 0px 0px;
+        margin: 0.4em 0em 0.25em 0em;
         font-size: 18pt;
     }
     
@@ -340,6 +336,10 @@ nav a:active {
         font-size: 16pt;
         text-align: center;
         margin-right: 3%;
+    }
+    
+    article img {
+        max-height: 300px
     }
     
     .splash a {
