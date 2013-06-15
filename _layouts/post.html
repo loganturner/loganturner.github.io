@@ -6,7 +6,7 @@ layout: default
     <a href="{{ page.url }}" class="title">{{ page.title }}</a>
 </div>
 <article class="blogpost single">
-    <span class="date">{{ page.date | date: "%B %d, %Y" }}</span>
+    <div class="date">{{ page.date | date: "%B %d, %Y" }}</div>
     {{ content }}
     <p>
         <a href="/{{ page.category }}">↩</a>
