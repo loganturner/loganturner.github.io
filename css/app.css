@@ -121,7 +121,7 @@ article img {
     display: block;
     margin: 1em auto 1em auto;
     max-width: 100%;
-    max-height: 500px;
+    max-height: 520px;
     border-radius: 10px;
 }
 
@@ -152,9 +152,45 @@ article p {
     bottom: 0px;
     left: 0px;
     margin: 0em 0em 0.5em 5%;
-    color: #fff;
+    color: black;
     font-size: 18pt;
-    text-shadow: 0 0 3px black, 1px -1px 1px #444, 1px 1px 1px #444, -1px 1px 1px #444, -1px -1px 1px #444;
+    text-shadow: 0 0 5px white, 0 0 5px white, 0 0 5px white, 0 0 5px white, 0 0 5px white, 0 0 6px white, 0 0 7px white, 0 0 8px white, 0 0 9px white, 0 0 10px white;
+}
+
+
+/* Lists */
+
+.list {
+    padding: 5%;
+    padding-top: 1em;
+}
+
+.list .post {
+    display: block;
+    clear: both;
+    margin: 20px 0 20px 0;
+}
+
+.thumbnail {
+    width: 120px;
+    height: 120px;
+    display: block;
+    float: left;
+    margin-right: 10px;
+    border-radius: 10px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 480px;
+}
+
+.list .details {
+    position: relative;
+}
+
+.list .title {
+    font-size: 16pt;
+    margin-top: 13px;
+    margin-bottom: 3px;
 }
 
 

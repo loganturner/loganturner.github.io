@@ -4,19 +4,20 @@ category: blog
 title: Blog
 ---
 
-<article>
-    <h1>{{ page.title }}</h1>
+<div class="list">
+    <h1>{{ page.title }} Posts</h1>
     {% for post in site.posts %}
       {% if post.category == 'blog'%}
-        <a href="{{ post.url }}">
-            <div class="bloghead">
+        <a class="post" href="{{ post.url }}">
+            <div class="thumbnail" style="background-image:url('{{ site.images_folder }}{{ post.splash_image }}')"></div>
+            <div class="details">
                 <span class="title">
                     {{ post.title }}
                 </span>
                 <span class="date">{{ post.date | date: "%B %d, %Y" }}</span>
+                <p class="description">{{ post.summary }}</p>
             </div>
-            {{ post.summary }}
         </a>
       {% endif %}
     {% endfor %}
-</article>
+</div>
