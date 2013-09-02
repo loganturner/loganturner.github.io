@@ -3,13 +3,15 @@ layout: default
 ---
 
 <div class="splash" style="background-image:url('{{ site.images_folder }}{{ page.splash_image }}')">
-    <a href="{{ page.url }}" class="title">{{ page.title }}</a>
+    <a href="{% if page.source_url %}{{ page.source_url }}{% else %}{{ page.url }}{% endif %}" class="title">{{ page.title }}</a>
 </div>
 <article class="blogpost single">
     <div class="date">{{ page.date | date: "%B %d, %Y" }}</div>
     {{ content }}
+    {% if page.source_url %}
     <p>
-        <a href="/{{ page.category }}">← {{ page.category }}</a>
+    <em>Source:</em> [<a href="{{ page.source_url }}">{{ page.source_name }}</a>]
     </p>
+    {% endif %}
 </article>
 

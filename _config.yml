@@ -1,4 +1,4 @@
 name: Logan
 pygments: true
-permalink: :categories/:title
+permalink: :title
 images_folder: /images/

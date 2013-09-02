@@ -2,8 +2,16 @@
 layout: default
 ---
 
-<article>
-<h1>Hi there.</h1>
-    <p>I'm Logan Turner, and this is my personal site.</p>
-    <p>Check out my blog, projects, or about me.</p>
-</article>
+<div class="list">
+    {% for post in site.posts %}
+        <a class="post" href="{{ post.url }}">
+            <div class="thumbnail" style="background-image:url('{{ site.images_folder }}{{ post.splash_image }}')"></div>
+            <div class="details">
+                <span class="title">
+                    {{ post.title }}
+                </span>
+                <span class="date">{{ post.date | date: "%B %d, %Y" }}</span>
+            </div>
+        </a>
+    {% endfor %}
+</div>

@@ -1,6 +1,5 @@
 ---
 layout: post
-category: blog
 title: Test Blog for Splash Photo
 splash_image: lion.jpg
 summary: "This is a test post with a summary that isn't very long."
