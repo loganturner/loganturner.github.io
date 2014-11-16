@@ -1,4 +1,6 @@
-name: Logan
-pygments: true
+name: Loganalogy
+tagline: you know. stuff.
+highlighter: true
 permalink: :title
 images_folder: /images/
+img: "\" class=\"pure-img"

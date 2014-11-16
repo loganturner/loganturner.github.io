@@ -2,16 +2,35 @@
 layout: default
 ---
 
-<div class="list">
+<div class="posts">
+    <h1 class="content-subhead">Recent Posts</h1>
     {% for post in site.posts %}
-        <a class="post" href="{{ post.url }}">
-            <div class="thumbnail" style="background-image:url('{{ site.images_folder }}{{ post.splash_image }}')"></div>
-            <div class="details">
-                <span class="title">
-                    {{ post.title }}
-                </span>
-                <span class="date">{{ post.date | date: "%B %d, %Y" }}</span>
+    <section class="post">
+        <header class="post-header">
+            <img class="post-avatar" alt="Logan&#x27;s avatar" height="48" width="48" src="http://s.gravatar.com/avatar/f6a82b9c770b8971f3611f3a211a41dd?s=48">
+            <a href="{{ post.url }}" class="post-title">{{ post.title }}</a>
+            <p class="post-meta">
+                {% if post.author %}By <a href="#" class="post-author">{{ post.author }}</a> {% endif %}
+                {% if post.categories.size > 0 %}
+                    {% if post.author == NULL %} Posted {% endif %} under {% for category in post.categories %}
+                        <a class="post-category" href="#">{{ category }}</a>
+                    {% endfor %}
+                {% endif %}
+            </p>
+        </header>
+
+        <div class="post-description">
+            {% if post.splash_image %}
+            <div class="post-images pure-g">
+                <div class="pure-u-1 pure-u-md-1-1">
+                    <img src="/images/{{ post.splash_image }}" class="pure-img-responsive">
+                </div>
             </div>
-        </a>
+            {% endif %}
+            <p>
+                {{ post.excerpt }}
+            </p>
+        </div>
+    </section>
     {% endfor %}
 </div>
